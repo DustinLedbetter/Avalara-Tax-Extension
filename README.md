@@ -14,5 +14,5 @@ Methods:
 4. private ISINI GetSf () (reduces code throughout project)
 5. LogMessageToFile
 6. GetConfigurationHtml
-7 . IsModuleType (string x) (determines if at shipping step)
+7. IsModuleType (string x) (determines if at shipping step)
 8. CalculateTax2 () 
