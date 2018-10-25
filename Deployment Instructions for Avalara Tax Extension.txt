@@ -1,0 +1,98 @@
+******************************************************************************************                                 GOD first                                             *
+*Name: Dustin Ledbetter                                                                 *
+*Date: 10-16-2018                                                                       *
+*Pageflex Extension: AvalaraTaxExtension                                                *
+*Purpose: A guide to walk a user through the installation of the AvalaraTaxExtension    *
+*****************************************************************************************
+
+Deployment Instructions
+=======================
+
+-------------------------
+-Notes before we begin: -
+-------------------------
+
+1.	The Storefront you are installing to should have "Price table and Shopping Cart show prices including tax" turned off. This can be found here:
+	1. Login to the Admin portal of the storefront
+	2. Under the 'Administration' section click 'Site Options'
+	3. Inside of this section click on the 'Shopping Cart' tab
+	4. Ensure "Price table and Shopping Cart show prices including tax" is turned off
+	*(If not, it will override our tax calculation and try to use nonexistent tax tables)*
+
+2.	Products on the store should require a shipping step for this tax to be calculated
+
+---------------------
+-Installation Part 1- [Find the extension on an already existing site or from repository]
+---------------------
+ 
+This extension should be installed on several sites already where you can find it and just copy and paste it to the desired site you need it on. 
+
+A few sites to look for it are: ' FILL IN ' on dev (FILL IN), ' FILL IN ' on dev (FILL IN), and ' FILL IN ' on live (FILL IN). 
+
+The link to the repository version: (FILL IN).
+
+Where to look on the existing site Interface:
+	1.  Find the deployment of the site (D:\\Pageflex\\Deployments\\Interface)
+	2.  Traverse to the bin folder of the site chosen. (\Interface\WebPages\bin)
+	3.  Find the folder named "AvalaraTaxExtension"
+
+---------------------
+-Installation Part 2- [install the extension to a NEW Pageflex deployment]
+---------------------
+
+1.	Copy the folder to the new deployment's bin folder. (\NewStorefront\WebPages\bin)
+2.      Create a folder named 'Logs' in the new deployment. (\NewStorefront\)
+*(If there is not a Logs folder then the extension will not work)*
+
+
+*(For steps 3 and 4)*
+
+-- You can find the dll’s needed in the copied extension folder or the repository
+
+-- If a dll already exists in the directory don't replace with a new version
+
+
+3. Copy the following dll's into the deployment's 'Webpages\bin\Extensions' directory 
+	1.  [Avalara.AvaTax.RestClient.net45.dll]
+	2.  [Avalara.AvaTax.RestClient.net45.pdb]
+	3.  [Avalara.AvaTax.RestClient.net45.xml]
+	4.  [Newtonsoft.Json.dll]
+  	5.  [Newtonsoft.Json.xml]
+4. Copy the following dll's into the deployment's 'Webpages\bin' directory 
+  	1.  [Newtonsoft.Json.dll]
+ 	2.  [Newtonsoft.Json.xml]
+
+
+
+*(If the extension is already in the list of existing extensions and is not set to active: Check the box next to the extension (Service: Avalara Tax Extension) and click 'Enable' to enable the extension.)*
+
+*(If the extension is NOT already present in the list of extensions in the site's Admin portal then follow the steps below)*
+
+1.      Login to the Admin portal of the storefront
+2.	Under the 'Administration' section click 'Extensions'
+3.	Click the 'Add New' button
+4.	Enter the path: 'AvalaraTaxExtension\AvalaraTaxExtension.dll'
+5.	Select *.NET Assembly (DLL)* as the assembly type
+6.      Check the 'active' box to be true
+7.	Click 'Continue'
+8.      Ensure that the two notes from the 'Notes before we begin' section are done
+9.      Log on as a user and place a test order to see that the tax rates are being set.  
+
+---------------
+-Configuration-
+---------------
+1.	Login to the Admin portal of the storefront
+2.	Under the 'Administration' section click 'Extensions'
+3.	Click the extension name: "AvalaraTaxExtension" to begin configuration
+4.	Here you can turn debug mode 'on' or 'off'
+        *(If it is turned on then when the extension is called it will log messages to the 
+          storefront logs tab and also it will log to a .txt file with the current date 
+          in the 'Logs' folder we created in the storefront’s deployment)*
+5.     The database logon information for the new storefront must be filled in here.
+6.     The Avalara logon information which should be the same for all storefronts must be filled in here.
+7.     Click 'Update' to save the configuration
+
+---------------------------------------------------
+-The extension is now installed and ready to use. –
+---------------------------------------------------
+
