@@ -3,8 +3,7 @@ This extension checks if we are on the shipping page, prints to the logs what we
 
 *(This version has been updated to add logging features and has added commenting for use in debugging )*
 
-*corrected an addition issue and polished comments and logging feature up more. tested on more site and ensured ready for live testing* 
-
+*(Added feature that sends out emails when errors occur in the extension)*
 
 Methods:
 1. Lots of variable fields from storefront
