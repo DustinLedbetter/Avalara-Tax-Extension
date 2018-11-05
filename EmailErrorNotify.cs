@@ -1,4 +1,12 @@
-﻿using System.Net;
+/***************************************************************************************************************************************************
+*                                                 GOD First                                                                                        *
+* Author: Dustin Ledbetter                                                                                                                         *
+* Release Date: 10-31-2018                                                                                                                         *
+* Version: 1.0                                                                                                                                     *
+* Purpose: This class is used to send out emails to inform  an error has occurred within the extension                                             *
+***************************************************************************************************************************************************/
+
+using System.Net;
 using System.Net.Mail;
 
 namespace AvalaraTaxExtension
@@ -81,5 +89,8 @@ namespace AvalaraTaxExtension
         }
 
 
+    //end of the class: EmailErrorNotify
     }
+//end of the file
 }
+
